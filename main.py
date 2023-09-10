@@ -29,7 +29,8 @@ class PortfolioAnalyzer:
         soup = BeautifulSoup(response.content, "html.parser")
 
         # Extract the required data using BeautifulSoup methods
-        self.data = soup.find_all('data')  # Replace 'data' with the appropriate HTML tag or class name
+        # Replace 'data' with the appropriate HTML tag or class name
+        self.data = soup.find_all('data')
 
     def analyze_data(self):
         # Perform machine learning algorithms and statistical models on the data
