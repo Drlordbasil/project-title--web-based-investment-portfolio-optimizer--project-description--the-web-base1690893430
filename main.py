@@ -23,45 +23,72 @@ class PortfolioAnalyzer:
 
     def web_scraping(self):
         # Make a request to the website
-        response = requests.get(self.url)
+        try:
+            response = requests.get(self.url)
+            # Parse the HTML content
+            soup = BeautifulSoup(response.content, "html.parser")
 
-        # Parse the HTML content
-        soup = BeautifulSoup(response.content, "html.parser")
+            # Extract the required data using BeautifulSoup methods
+            # Replace 'data' with the appropriate HTML tag or class name
+            self.data = soup.find_all('data')
 
-        # Extract the required data using BeautifulSoup methods
-        # Replace 'data' with the appropriate HTML tag or class name
-        self.data = soup.find_all('data')
+        except requests.exceptions.RequestException as e:
+            print(e)
 
     def analyze_data(self):
         # Perform machine learning algorithms and statistical models on the data
-        # ...
-        pass
+        try:
+            # ...
+            pass
+
+        except Exception as e:
+            print(e)
 
     def calculate_risk_measures(self):
         # Calculate risk measures such as volatility and correlation
-        # ...
-        pass
+        try:
+            # ...
+            pass
+
+        except Exception as e:
+            print(e)
 
     def optimize_asset_allocation(self):
         # Apply optimization algorithms to determine optimal asset allocation strategies
         # based on investment objectives and risk tolerance
-        # ...
-        pass
+        try:
+            # ...
+            pass
+
+        except Exception as e:
+            print(e)
 
     def monitor_portfolio_performance(self):
         # Continuously monitor the performance of the portfolio using real-time data
-        # ...
-        pass
+        try:
+            # ...
+            pass
+
+        except Exception as e:
+            print(e)
 
     def generate_reports(self):
         # Generate reports and visualizations for portfolio evaluation
-        # ...
-        pass
+        try:
+            # ...
+            pass
+
+        except Exception as e:
+            print(e)
 
     def get_real_time_notifications(self):
         # Subscribe to real-time market events and send notifications
-        # ...
-        pass
+        try:
+            # ...
+            pass
+
+        except Exception as e:
+            print(e)
 
     def run(self):
         self.web_scraping()
